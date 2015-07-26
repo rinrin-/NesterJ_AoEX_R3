@@ -1,0 +1,167 @@
+
+how to netplay in unofficial nester
+-----------------------------------
+
+
+*****              OUT OF SUPPORT,               *****
+***** DONT ASK ME QUESTION ABOUT NETWORK FEATURE *****
+
+
+how to use netplay feature:
+
+server:
+  * load ROM
+  * select "File"-"netplay"-"server (1P)"
+  * input Network Latency ( 0(auto), 1(fast) - 9(slow))
+    and Port number (1024-65535 except 8080, default:10000)
+
+  then server starts waiting client connection.
+
+  * if you wanna exit waiting client's connection,
+    select "File"-"netplay"-"cancel connection"
+
+client: (after server setup)
+
+  * load same ROM
+  * select "File"-"netplay"-"client (2P)"
+  * input Server's IP Address (XXX.XXX.XXX.XXX) and Port number.
+
+
+when connected, both server and client reset and start games.
+server controls 1P, and client controls 2P.
+but you must use 1P's pad of client machine to control 2P.
+(because almost user seem to have only 1 pad. I too.)
+
+while netplay, close button on the window title bar is grayed.
+its enabled again when disconnected.
+select "File"-"netplay"-"disconnect" to exit netplay.
+
+when emulation is paused (beause of kill forcus, touch menu bar, ...),
+connection between server and client must be broken.
+if control seems to be freezed, please disconnect.
+
+both server and client, usualy send only pad infomation,
+so not supported games that use external devices.
+
+  exception: MIC, VS-Unisystem's InsertCoin, HyperShot
+             (nester sends these info as pad bits)
+
+support FDS, but only server can change disk side.
+and use shortcut key 'A' - 'E' to change it.(dont use menu)
+
+save data must be same if exist.
+if FDS, disk image (include written data) must be same.
+
+GameGenie code is supported in netplay, but both must have same code.
+Movie feature is not supported in netplay.
+
+
+note:
+support both LAN and Internet.
+
+note2:
+dont use CTRL+ALD+DEL to shutdown nester while netplay.
+windows destroys only window, ghost task remains.
+use "File"-"Netplay"-"disconnect" to exit netplay.
+
+note3:
+of course, need TCP/IP. :-)
+
+
+-------------------------------------------------------------------------------
+
+protocol (rev.2)
+----------------
+
+(connection)
+
+     SERVER                   CLIENT
+    --------                 --------
+    accepting client                                   
+                             connect to server         
+
+    send sv_version          send cl_version           = 0x02
+    recv cl_version          recv sv_version           
+    compare versions         compare versions          if not same, exit
+
+    dwFirst = timeGetTime                              check network latency
+    send 0x00                                          
+                             recv                      
+                             send 0x00                 
+    recv                                               
+    send 0x00                                          
+                             recv                      
+                             send 0x00                 
+    recv                                               
+    send 0x00                                          
+                             recv                      
+                             send 0x00                 
+    recv                                               
+    send 0x00                                          
+                             recv                      
+                             send 0x00                 
+    recv                                               
+    dwLast = timeGetTime                               
+
+    latency = (uint8)((dwLast-dwFirst)*60/8000)+1      if latency auto setting
+                                                       if latency > 30, exit
+    send latency                                       
+                             recv latency              
+
+    send 0x00                send 0x00                 initial pad bits (dummy)
+
+
+(sending pad info)
+
+  top of ( m - latency)th frame
+  -----------------------------
+              :                        :               
+              :                        :               
+    past_pad1 = curr.pad1    past_pad1 = curr.pad1     
+    past_pad2 = curr.pad2    past_pad2 = curr.pad2     
+                             past_pad2 = past_pad1     
+    (send ex_info)           (send ex_info)            
+    send past_pad1           send past_pad2            
+
+  top of ( m )th frame
+  --------------------
+    (ex_info = recv())       (ex_info = recv())        
+    pad1 = past_pad1         pad1 = recv()             while (m)th -
+    pad2 = recv()            pad2 = past_pad2            (m+latency-1)th,
+                                                       return pad bits got at
+    past_pad1 = curr.pad1    past_pad1 = curr.pad1       top of (m-latency)th
+    past_pad2 = curr.pad2    past_pad2 = curr.pad2       frame.
+                             past_pad2 = past_pad1     
+    send past_pad1           send past_pad2            
+
+  top of ( m + latency)th frame
+  -----------------------------
+    (ex_info = recv())       (ex_info = recv())        
+    pad1 = past_pad1         pad1 = recv()             while (m+latency)th -
+    pad2 = recv()            pad2 = past_pad2            (m+2*latency-1)th,
+         :                        :                    return pad bits got at
+         :                        :                      top of (m)th frame.
+
+  * if MIC or InsertCoin is active, pad bits = 0x30.
+
+  * if (recv() & 0xC0) == 0xC0, its data is ex_info and recv() again.
+
+  * ex_info format
+      11nndddd :  nn=type, dddd=data
+      ---------------------------------------------
+      1100---- : reserved
+      1101---- : reserved
+      1110---- : reserved
+      1111-ddd : change disk side (ddd = disk side)
+
+    (note: pad bits is RLDUbbbb, but never push R&L/D&U at the same time)
+
+  * drop frame doesnt occur if data server(client) sent is recieved
+    by client(server) in (time of 1 frame)*(latency).
+    (note: the time of 1 frame is 1/60 sec.)
+
+
+------------------------
+TAKEDA, toshiya
+t-takeda@m1.interq.or.jp
+

@@ -1,0 +1,93 @@
+About nesterJ additional code written by Mikami Kana
+
+	e-mail: nesterj@mikamikana.cjb.net
+			mikamikana@geocities.co.jp
+			mikamikana@hotmail.com		(WEB-mail)
+			mikamikana@princess.co.jp	(WEB-mail)
+
+Please send the bugs in:
+
+	Reading Compressed File
+	Sound Recording
+	Screen shots
+
+or so.
+
+(But I will be able to understand you only in Japanese or
+ in "easier" English.)
+I might be able to fix the bugs ( or nothing to do --- ).
+
+
+Added source files (All these are in "src/mikami")
+
+	arc.cpp, arc.h :
+			Archiver uncompression function and types.
+
+	CSndRec.cpp, CSndRec.h :
+			Wave sound recording class.
+
+
+
+Changed source files:
+	nes_rom.cpp :
+			Some functions changed for read compressed file
+
+	win32_emu.cpp :
+		Some member functions added
+			-> for sound recording.
+
+	win32_directsound_sound_mgr.cpp :
+		Added the member class (CSndRec rec) and some codes
+			-> for sound recording.
+
+	winmain.cpp :
+		Added several codes
+			->for menu command( Sound recording support ), and
+			  for file open dialog ( Compressed file support ).
+
+ver 0.17a :
+	win32_emu.cpp :
+		A member function added
+			-> for sound recording.
+	winmain.cpp :
+		Added some codes
+			-> for menu command( Sound recording bugs ).
+
+
+ver 0.31 sp1 :
+	for Developers:
+
+	Be careful of
+		void NES_PPU::render_bg member function.
+
+	I added try-catch statement.
+
+	When it caused error in for-loop
+	and error-skip check box is checked,
+	continue to loop.
+	If error-skip check box is not checked,
+	it throws an exception; It looks same to
+	previous versions.
+
+ver 0.351 sp4 :
+	"mbcs.h" and "mbcs.cpp",which are added in ver 0.351 sp3, are removed.
+	They have a seriouse problem on 1 byte "kata-kana" charactors,
+	a part of Shift-JIS code.
+	Instead, "mkutils.h" and "mkutils.cpp" are added.
+	Their purpose is getting long file name, and creating several
+	directories at once.
+	They rooted WIN32-APIs.
+	You follow GPL2 or lator.
+
+ver 0.48
+	add "shot_screen()" member function to these,
+		win32_emu, screen_mgr, NES_screen_mgr, win32_NES_screen_mgr,
+		win32_fullscreen_NES_screen_mgr, win32_windowed_NES_screen_mgr
+	for Screen Shot.
+	
+	winmain.cpp changed for Menu for Screen Shot.
+	CPathSettings and win32_dialogs changed for Screen Shot folder selecting.
+	So was resource.
+	
+	voided debug.h, mono.h because these have memory error in debug.
+

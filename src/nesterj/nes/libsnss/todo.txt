@@ -1,0 +1,25 @@
+
+SNSS Todo:
+
+44	Super HiK 7-in-1		MMC3
+45	1000000-in-1			?
+47	NES-QJ				MMC3
+52	Mario 7-in-1			MMC3
+90	PC-JY-??			?
+100	Nesticle MMC3			MMC3
+112	PC-Asder			MMC3
+118	IQS MMC3			MMC3
+119	TQ-ROM				MMC3
+
+183	Gimmick (Bootleg)		
+187	Street Fighter Zero 2 97	
+237	70-in-1				
+
+SNSS Out of Format (with WRAM):
+
+1	Nintendo MMC1 (Best Play - Pro Yakyuu Special)
+5	Nintendo MMC5			
+6	FFE F3xxx series		
+13	CPROM				
+20	Nintendo Disk System		
+

@@ -1,0 +1,18 @@
+MAPPER 0
+
+MAPPER 1
+
+MAPPER 2
+
+MAPPER 3
+
+MAPPER 4
+  smb3 - title screen jitters
+  crystalis - irq timing
+
+MAPPER 7
+  battletoads - freezes (sprite 0 hit...?)
+  cobra triangle - corrupted title screen gfx (one line)
+  marble madness - text box weirdness
+
+MAPPER 9

@@ -1,0 +1,39 @@
+http://forums.ps2dev.org/viewtopic.php?t=9591
+
+Exception Handler for Kernel 3.xx by sakya
+__________________________________________
+
+Hi! :)
+
+First: this is not my code, I simply got the code from crazyc and SamuraiX and made it easy to use (at least for me). ;)
+Original thread: http://forums.ps2dev.org/viewtopic.php?t=9564
+Maybe it's usefull for someone else...
+
+What is this?
+_____________
+This is a prx to handle exception on PSP, when an exception is raised some usefull information are shown on the display (and can be dumped to a text file).
+
+How to compile it
+_________________
+Enter the prx directory and simply type
+
+	make
+
+This way you have the exception.prx file.
+
+How to use it
+_____________
+Check the test program in the test directory.
+In your program you have only to include exception.h and initialize the handler.
+
+	#include "../utility/exception.h"
+	initExceptionHandler();
+
+Copy exception.prx in the same directory where your EBOOT is.
+
+Download: http://www.sakya.it/downloads/exceptionHandler.rar
+
+Ciaooo
+Sakya
+
+Fri Jan 04, 2008 8:57 pm

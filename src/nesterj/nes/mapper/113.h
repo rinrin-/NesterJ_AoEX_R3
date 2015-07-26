@@ -1,0 +1,10 @@
+
+/////////////////////////////////////////////////////////////////////
+// Mapper 113
+void NES_mapper113_Reset();
+void NES_mapper113_MemoryWriteLow(uint32 addr, uint8 data);
+void NES_mapper113_MemoryWrite(uint32 addr, uint8 data);
+
+void NES_mapper113_Init();
+/////////////////////////////////////////////////////////////////////
+

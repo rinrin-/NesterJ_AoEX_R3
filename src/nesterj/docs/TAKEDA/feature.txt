@@ -1,0 +1,62 @@
+
+--- supported mappers ---
+
+  0,1,2,3,4,5,6,7,8,9,10,11,13,15,16,17,18,19,20,21,22,23,24,25,26,32,33,34,
+  40,41,42,43,44,45,46,47,48,49,50,51,52,57,58,60*,64,65,66,67,68,69,70,71*,
+  72,73,75,76,77,78,79,80,82,83,85,86,87,88,89,90,91*,92,93,94,95,96,97,99,
+  100,101,105,112,113,117,118,119,122,151,160,180,181,182,184,185,188,189,225,
+  226,227,228,229,230,231,232,233,234,235,236,240,242,243,245*,246,248,255
+
+  (* is partial support)
+
+--- supported images ---
+
+  * NES ROM Image                       (*.NES, *.NEZ)
+  * Disk System Image                   (*.NES, *.FDS, *.FAM)
+  * VS-Unisystem ROM Image              (*.NES)
+  * PlayChoice-10's splitted ROM Image  (*.PCT + *.BIN)
+  * NES Audio Ripping Data              (*.NSF)
+
+  fix header infomation if exist nestoy rom database 'nesdbase.dat'
+
+--- supported devices ---
+
+  * controller #1 and #2(with mic device)
+  * insert coins in VS-Unisystem games
+
+  * Arkanoid Paddle
+  * Crazy Climber Controller
+  * Datach Barcode Battler
+  * Doremikko Keyboard
+  * Exciting Boxing Controller
+  * Family Basic Keyboard (with Data Recorder)
+  * Family Trainer
+  * Hyper Shot
+  * Mahjong Controller
+  * Oeka Kids Tablet
+  * Optical Gun (Zapper)
+  * Pokkun Moguraa Controller
+  * Power Pad
+  * Space Shadow Gun
+  * Turbo File (with automatical bank switch)
+  * VS Unisystem Zapper
+
+--- extras ---
+
+  * Game Genie
+  * TCP/IP network play (LAN/Internet)
+  * NSF Player
+  * Movie Recorder/Player
+  * ROM Database for "header correcting" and "external device selecting"
+
+--- emulation core ---
+
+  * Extra Sound (FDS, FME7, MMC5, N106, VRC6, VRC7) with NEZplug Sound Core
+  * PAL emulation
+  * Frame-IRQ (e.g. Dragon Quest 1/2)
+  * DPCM-IRQ (e.g. Romancia)
+  * VROM Bank Switch per drawing 8 dots (e.g. MOTHER)
+  * Bank-Switched SaveRAM (e.g. Best Play - Pro Yakyuu Special)
+  * Serial-Connected SaveRAM (e.g. Dragon Ball Z) (partial)
+  * I/O Connected SaveRAM (e.g. Mindseeker, Kaijuu Monogatari)
+

@@ -1,0 +1,11 @@
+fullscreen garbage in DX5,6,7 (3?)
+DDCAPS2_FLIPNOVSYNC, DDFLIP_NOVSYNC
+optimize double size
+smb3 jitters
+make sure all vid writes are aligned
+check for mem leaks
+check dialog tab order
+netplay
+DDSCL_NOWINDOWCHANGES weirdness
+< 60hz
+windowed DirectDraw

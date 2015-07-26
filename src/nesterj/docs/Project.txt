@@ -1,0 +1,17 @@
+// all folders off the root that have include files must be specified
+under Project->Settings->C/C++->Preprocessor->Additional Include Directories [All Configurations]
+src,src/debug,src/nes,src/nes/cpu,src/nes/ppu,src/nes/apu,src/nes/libsnss,src/win32,src/win32/resource
+
+// directx and multimedia library files that need to be linked in
+under Project->Settings->Link->Object/Library Modules [All Configurations]
+add ddraw.lib dsound.lib dinput.lib dxguid.lib winmm.lib comctl32.lib
+
+// for directx headers:
+under Tools->Options->Directories->Include Files
+add header directory, move to top
+add .\src\win32\dxlib, move to top
+
+// for directx libraries:
+under Tools->Options->Directories->Library Files
+add library directory, move to top
+add .\src\win32\dxlib, move to top

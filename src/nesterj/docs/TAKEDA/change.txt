@@ -1,0 +1,892 @@
+
+2001/07/05
+
+  code added	245(thanx r1),248(thanx ScottWu),60
+  code fixed	18,19(thanx r1),235(thanx nez-nez)
+
+  # support 'Jajamaru Gekimaden - Maboroshi no Kinmajou'(#18)
+  # support 'Digital Devil Story - Megami Tensei 2'(#19)
+  # support 'TN 95-in-1 (65-in-1)'(#60)
+  # support '260-in-1'(#235)
+  # support 'Yong Zhe Dou E Long - Dragon Quest 6'(#245)
+  # support 'Bao Qing Tian'(#248)
+
+  notice:
+  please change iNES header $4(rom size)'s value to $00 in '260-in-1'(#235)
+
+2001/06/24
+
+  code fixed	PPU,4,45
+
+  # support 'Dai2Ji - Super Robot Taisen'(#4) (thanx r1)
+  # fix VROM bankswitch problem for #45 games.
+  # support 'Gradius AC 2000 (Hack)' (patch on sprite 0 hit flag)
+
+2001/06/18
+
+  code fixed	PPU,1,4,6,13,19,85,96,119(VRAM BankSwitch),45
+
+  # support 'HIK 7-in-1', 'Kunio 8-in-1', 'Super 8-in-1'(#45)
+  # support state save for :
+  #   * games using bankswitched patterntable vram (e.g. Tenchi wo Kurau 2)
+  #   * games using over 8KB patterntable vram (e.g. Oeka Kids)
+
+2001/06/17
+
+  # fast disk access (skip frames while disk is accessed)
+  # support auto palette change for 'VS Freedom Force'(thanx Screw)
+  # support 'Famicom Top Management'(#1)
+
+2001/05/01
+  code fixed	5(thanx Norix)
+  SNSS support	1,5,6,13,41,42,43,51,57,83,96,105,117,160,182,189,226,230,232,
+              	234,236,243,255
+
+  # support 'Just Breed'(#5)
+  # support Software Reset(thanx r1)
+
+2001/04/29
+  code added	57,58
+  code fixed	20(thanx GIGO)
+  code tested	20
+
+  # support 'VS Freedom Force'
+  # fix FDS reg $4032
+
+  i'd moved to Yamanashi to start job in robotics company last month.
+  im too busy to update frequentry...
+
+2001/03/23
+  code fixed	20
+  tested	20
+
+  # support 'Madou Senki - Deep Dungeon'
+  # support 'Fuuun Shourinken - Ankoku no Maou'
+  # support 'Michael no English Dai Bouken'
+  # support 'Titanic Mystery - Ao no Senritsu'
+  # (fix FDS $4032 reg.)
+
+2001/03/22
+  code fixed	20
+  tested	20
+
+  # support 'VS Super Skater (Bootleg)'
+  # support 'Yuushi no Monshou (Deep Dungeon)'.
+
+  # change disk save file format (same as fds format / can load old files).
+  # change disk state save file format (can not load old files).
+  # calcurate number of files in fds image when load.
+
+2001/03/20
+  code fixed	5,44,105(thanx Quietust)
+  tested	5,44,105
+
+  # support Nestoy's ROM database.
+    put 'nesdbase.dat' to the same directory of nester.exe
+
+  # support 'VS Battle City (Bootleg)'
+  # support 'VS Excitebike (Alt)' and 'VS Pinball (Alt)'.
+
+2001/03/16
+  code added	52(thanx Quietust)
+  code fixed	47,189
+  tested	47,52,189
+
+  # support 'Supare Mario Bros - Tetris - Nintendo World Cup' on #47
+  # new database to switch NTSC/PAL mode.
+
+2001/03/13
+  code added	51(thanx Quietust),105,236,237
+  code fixed	33(thanx NoriX)
+  tested	33,51,(105),236,(237)
+
+  # support 'Captain Saver'
+  # fixed PAL emulation (screen size & clock)
+
+2001/02/21
+  code added	119(thanx Quietust),181
+  code fixed	43(thanx Quietust)
+  tested	43,119,181
+
+  # fixed APU core (thanx YANO)
+  # support PAL mode (partial)
+
+2001/02/13 (test)
+
+  # use new 6502 Core.
+  # add DoPendingIRQ(), nes6502_pending_irq().
+  # disenable irq pending in DoIRQ(), nes6502_irq().
+
+2001/02/12
+
+  # rewrite FDS Sound Core.(souce code is not availabled)
+  # nester may not be freezed in fullscreen mode if you use Voodoo GAs.
+  #  (may be freezed yet...especially in 240 line mode)
+
+  # split all mapper source codes.
+
+  i finished writing my paper about posture control of air actuator.
+  now i can restart nester development.
+
+2001/01/27
+  code fixed	NSF(thanx rinao)
+
+  # support 'Doremikko Keybord'
+  # fix 'Space Shadow Gun'
+  # fix NSF Player (enable all APU channel)
+
+2001/01/23
+  code fixed	20
+
+  # support 'VS Tetris'
+  # support state save for FDS games
+  #  (tentative / with no assurance of format compatibility in future)
+
+2001/01/20
+  code fixed	4
+
+  # support 'VS TKO Boxing'(thanx MAME team)
+  # fix the mirroring of 'VS Hogan's Alley'
+
+2001/01/18
+
+  # support 'VS Duck Hunt' and 'VS Hogan's Alley'(thanx MAME team)
+  # fix the palette of 'VS IceClimber' and 'VS Clu Clu Land'(thanx screw)
+  # fix PPU register $2001(thanx rinao)
+
+2001/01/11-12
+  code fixed	18,33(thanx rinao)
+  tested	18,33
+
+  # support 'Ninja Jajamaru - Ginga Dai Sakusen'(#18)
+  # support 'The Jetsons - Cogswell's Caper!'(#33)
+  # support 'Space Shadow Gun'
+
+2001/01/09
+
+  # support FDS games in netplay.
+
+2001/01/07-08
+
+  # support network play (LAN / Internet)
+
+2001/01/05
+  code fixed	20(thanx rinao),nes_apu(thanx YANO)
+  tested	20
+
+  # support 'Pat Pat Golf'(#20)
+  # fix APU core (volume/DPCM)
+
+2001/01/03
+
+  # support 'Data Recorder'
+
+2001/01/02
+
+  # support 'Datach Barcode Battler'
+
+2000/12/31-2001/01/01
+
+  happy new centruy!
+
+  # support Rec/Play Movie.
+  # support change sound setting (samples, triangle) (thanx YANO, Mikami Kana)
+
+2000/12/30
+
+  # support 'Game Genie'
+
+2000/12/29
+  code fixed	nes_apu(thanx YANO),49(thanx xodnizel),5
+  tested	5,49
+
+  # support 'Sangokushi 2'(#5)
+  # support 'Super HIK 4 in 1'(#49)
+
+2000/12/20 (2nd / test)
+
+  # init DirectSound Primary buffer.
+
+2000/12/20
+  code fixed	20(thanx nori)
+  tested	20
+
+  # support 'Lutter'(#20)
+
+2000/12/17-19
+  code fixed	26(thanx rinao), 20
+  tested	20
+
+  # support 'Mouryou Senki Madara'(#26)
+  # support 'Koneko Monogatari', 'Titanic Mystery'(#20)
+
+2000/12/16 (2nd)
+  code fixed	1,nes_fds(thanx rinao)
+
+  # update the data-base of cycles_per_line for some FDS games.
+
+2000/12/16
+  code added	49,50
+  tested	(49),50
+
+  # support 'Super Mario Bros. 2 (Pirate)(Rev A)'(#50)
+
+  sorry now i'm too busy to update daily...
+
+2000/12/13
+  code fixed	1,19,25,26(thanx rinao),nes_apu(thanx YANO)
+
+2000/12/10
+  code fixed	25(thanx rinao),235(thanx Quietust)
+  tested	25,235
+
+  # support 'Rolling Thunder'(#19)
+  # support 'T.M.N.T.' & 'T.M.N.T.2'(#25)
+  # support '150-in-1'(#235)
+
+2000/12/08-09
+  code fixed	16,17,18,19,21,22,23,24,25,26,32,33,46,48,64,65,67,68,69,73,
+            	75,76,82,85,88,95(SNSS)
+  code fixed	73
+
+  # support DPCM IRQ (e.g.Romancia) (thanx Nori)
+  # fix 16bit IRQ Counter of #73
+
+2000/12/08
+  code fixed	5(thanx Quietust and xodnizel),32(thanx rinao)
+  tested	5,32
+
+  # support 'Just Breed'(#5)
+  # support 'Ai Sensei no Oshiete - Watashi no Hoshi'(#32/#65)
+
+2000/12/06-07
+  code fixed	5
+  tested	5
+
+  # support 'Ishin no Arashi', 'Nobunaga no Yabou - Bushou Fuuunroku'(#5)
+  # support PPU BankSwitch of 'Mother'(#4) (thanx Nori)
+
+2000/12/05 (2nd)
+  code fixed	5
+  tested	5
+
+2000/12/04-05
+  code fixed	25,42(thanx xodnizel),nes_fds(thanx rinao),5
+  tested	5,25,42
+
+  # support Koei's #5 games (Partial ... cant save yet)
+  # support 'T.M.N.T.2'(#25)
+
+2000/12/03 (2nd)
+  code fixed	1
+  tested	1
+
+  # fix save/load datas written to disk.
+  # support BankSwitch-WRAM of 'Best Play - Pro Yakyuu Special'(#1)
+  # support 'Gekitou!! Stadium'(#1) (thanx rinao)
+
+2000/12/01-03
+  code fixed	88(thanx rinao),232(thanx Fx3),16
+  tested	16,88,232
+
+  # support SaveRAM of 'Dragon Ball Z - Kyoushuu! Saiya Jin'(#16)
+  # support 'Devil Man'(#88)
+  # support 'Quattro Games'(#232)
+
+2000/11/30
+  code added	234(thanx Quietust)
+  code fixed	112(thanx ScottWu)
+  tested	112,234**
+
+2000/11/29 (2nd)
+
+  # support 'Family Basic Key Board'(thanx rinao)
+
+2000/11/28-29
+  code fixed	nes_apu(thanx stun),235(thanx xodnizel)
+  tested	235
+
+  # change '260-in-1' and '000-in-1' in every reset.(#235)
+
+2000/11/27
+  code added	43
+  code fixed	4(thanx rinao),45,71(thanx xodnizel)
+  tested	4,(43),45,71
+
+  # support 'Chou Jinrou Senki - Warwolf'(#4)
+  # support '1000000-in-1'(#45)
+  # change mapper number #43 to #235 assigned for '150-in-1'
+  # support auto palette change for 'VS Atari RBI Baseball'(thanx Screw)
+  # update the data-base of cycles_per_line.
+
+2000/11/26 (2nd)
+  code added	48(thanx xodnizel)
+  code fixed	winmain(thanx Mikami Kana),nes,fds
+  tested	48
+
+  # support 'The Flintstones - The Rescue of Dino & Hoppy'(#33/#48)
+  # update the data-base of cycles_per_line.
+  # fix the wait routine for FDS disk change.
+  # fix the support of ROM Trainer.
+  # support change dropped short filename to long filename.
+
+2000/11/26
+  code fixed	nes,fds
+
+  # support 'Silviana (Ai Ippai no Boukensha)', 'Super Load Runner'(FDS)
+  # support 'VS Atari RBI Baseball'(thanx xodnizel)
+
+2000/11/25
+  code added	242(thanx Scott Wu)
+  tested	242
+
+  # support 'Arkanoid Paddle'(thanx Nori)
+
+2000/11/24 (2nd)
+  code fixed	23,25,96(thanx rinao)
+  tested	96
+
+  # support 'Oeka Kids'(#96)
+  # fix 'Oeka Kids Tablet'
+
+2000/11/23-24
+  code fixed	3,4,85(thanx rinao),96(thanx Nori)
+  tested	3,4,85,96*
+
+  # update the data-base of cycles_per_line.
+  # support 'Micky Mousecapade (Alt)'(#3)
+  # support 'Tiny Toon Adventure 2'(#85)
+  # support 'Oeka Kids'(#96) (Partial)
+  # support 'Oeka Kids Tablet'
+  # fix the aim point of 'Optical Gun'.
+
+2000/11/21-22
+  code fixed	180
+  tested	180
+
+  # spport automatical bank switch of Turbo File for each games.
+  # support Crazy Climber controller.(thanx Takecchi)
+
+2000/11/20
+
+  # support 'Turbo File' (thanx Nori)
+  # update the data-base of cycles_per_line for many #4 games.(thanx rinao)
+
+
+2000/11/19
+  code added	83(thanx mat),nes_set_cycles
+  code fixed	nes_ppu(thanx rinao), nes_rom
+  tested	83
+
+  # support 'Star Force'(#0)
+  # fixed support of FAM5 disk image.
+  # fixed Color/Monochrome bit of PPU $2001
+
+
+2000/11/17-18
+  code added	nes_rom_correct,nes_set_controller,nes_set_vspalette
+
+  # support NEZ format rom image.
+  # add rom-database to correct the errors of nes header changed by nestoy.
+  # put the codes about selecting expand controller to order.
+  # put the codes about setting vs-unisystem palette to order.
+
+2000/11/16
+  code fixed	19,nes_rom,nes_ppu
+  tested	19
+
+  # support SaveRAM of 'Kaijuu Monogatari' and 'Mindseeker'(#19)
+  # support Color/Monochrome bit of PPU $2001 partly (e.g. DragonQuest)
+
+  i've uploaded a open mail to the author of Famicommunist at:
+  http://www1.interq.or.jp/~t-takeda/bin/openmail.txt
+
+2000/11/15 (2nd)
+  code added	182(thanx xodnizel)
+  code fixed	nes_rom
+  tested	182
+
+  # support 'Super Donkey Kong'(#182)
+  # support new FAM format disk images.
+  # fixed the memory leak in the extra sound codes.
+  # change the base source codes to nester public beta 3.
+
+2000/11/15
+  code fixed	67,68,69(thanx rinao),64,65
+  tested	64,65,67,68,69
+
+  # support 'Klax'(#64)
+  # support 'Spartan X2'(#65)
+  # support 'Fantasy Zone 2'(#67)
+  # support 'Nantettatte!! Baseball', 'VS Platoon'(#68)
+  # support 'Dynamite Batman'(#69)
+
+2000/11/14
+  code fixed	70(thanx rinao)
+  tested	70
+
+  # support 'Family Trainer - Manhattan Police'(#70)
+  # support Power Pad (side A & B)
+
+2000/11/11-13
+  code added	47,187
+  code fixed	4,19,32(thanx rinao),16,160
+  tested	4,16,19,32,47,160,(187)
+
+  # support 'F-1 Sensation'(#4)
+  # support 'Sakigake!! Otoko Juku'(#16)
+  # support 'Family Studium '92'(#19)
+  # support 'Super Spike V'Ball - Nintendo World Cup'(#47)
+  # support 'Aladdin'(#160) perfectly!!
+  # add the games support select Zapper automaticaly
+
+2000/11/10
+  code fixed	3,16(thanx rinao)
+  code fixed	43,235,241(thanx nez nez)
+  code fixed	112(thanx Buddha)
+  code fixed	117
+  tested	3,16,43,112,117
+
+  # support 'Blue Train Satsujin Jiken', 'Dragon Ball 3 Gokuu Den'(#16)
+  # support 'Sangokushi 4'(#117)
+
+  i read a paper of my study again at a meeting of SICE.
+
+2000/11/09
+  code added	46
+  code fixed	21,96
+  tested	21,46,(96)
+
+  # supported 'Ganbare Goemon Gaiden 2'(#21)
+  # select Expand Controlers automaticaly.
+
+2000/11/08
+  code fixed	19(thanx Marimo), 20,21,32(thanx rinao)
+  tested	1,19,20,21,32
+
+  # support 'VS Dr. Mario'(#1)
+  # support 'DDS Megami Tensei 2'(#19)
+  # support 'Reflect World'(#20)
+  # support 'Ganbare Goemon Gaiden 2'(#21)
+  # support 'Major League'(#32)
+
+2000/11/07
+
+  # support Optical Gun
+
+2000/11/06
+  code fixed	1(thanx rinao),231
+  tested	1,231
+
+  # support 'Ninja Cop Saizou', 'Kame no Ongaeshi', and others(#1)
+  # support some PlayChoice-10 games.
+
+2000/11/05
+  code fixed	21,23,25(thanx riano)
+  tested	21,23,25
+
+  # support 'Konami WaiWai World 2'(#21)
+  # support 'Akumajou Special - Boku Doracula Kun'(#23)
+  # support 'T.M.N.T.'(#25)
+
+  # support PlayChoice-10 ROM image.
+
+2000/11/04
+  code fixed	nes_ppu,5(thanx Quietust)
+  tested	5
+
+  # support 'Gun Sight'(#5)
+  # support Expand Controller: Exciting Boxing
+
+2000/11/03
+  code fixed	66(thanx rinao), nes,20
+  tested	20,66
+
+  # support 'Paris-Dakar Ralley Special'(#66)
+  # support save the datas writed to disk.
+
+2000/11/02
+  code fixed	1,4,8(thanx rinao)
+  tested	1,4,8
+
+  # support 'Shougi Meikan 92/93', 'Business Wars', 'ProjectQ'(#4)
+  # support 'The Triathron'(#1)
+  # support 'Paris-Dakar Ralley Special'(#8)
+
+  # support Expand Controllers:
+  #  'Family Trainer', 'Hyper Shot', 'Mahjong Controller', 'Pokkun Moguraa'
+
+2000/11/01-02
+  code fixed	1,4,19
+  code fixed	nes,nes_apu
+  tested	1,4,19
+
+  # fixed read $4015 in APU again, support sounds of 'Exerion', and others.
+  # swap controlers in 'VS Dr.Mario'(#1) and 'VS Super Sky Kid'(#4)
+
+2000/10/31-11/01
+  code fixed	0,99(thanx Screw)
+  code fixed	nes,3,19(thanx rinao)
+  code fixed	nes_apu(thanx Nori)
+  tested	0,3,19,99
+
+  # support change palette in VS-Unisystem at:
+  #  'Slalom'(#0)
+  #  'Battle City', 'Pin Ball'(#99)
+  # change the coin insert key to 'M'
+
+  # support 2P Controler's mic device (use key 'M', same as coin insert)
+
+  # fixed read $4015 in APU, support sounds of 'Chack 'n Pop', or others.
+  # fixed emulate_frame() in Nes.cpp, supprt 'DDS Megami Tensei2'(#19)
+  # support 'Minna no Taabou no Nakayoshi Daisakusen'(#3)
+
+2000/10/30 (2nd)
+  code fixed	1,4,99
+  code fixed	80,82(thanx rinao)
+  tested	1,4,80,82,99
+
+  # support change palette in VS-Unisystem at:
+  #  'Dr.Mario'(#1)
+  #  'Super Sky Kid'(#4)
+  #  'Clu Clu Land', 'Pin Ball', 'Mach Ride', 'Golf', 'Soccer'(#99)
+  # support 'Taito Grand Prix', 'Kyuukyoku Harikiri Studium'(#82)
+
+2000/10/30
+  code added	240
+  tested	240
+
+2000/10/29 (2nd)
+  code added	189
+  code fixed	2,99
+  tested	2,99,189*
+
+  # fixed the palette of 'Ice Climber'
+  # support 'VS Castlevania'(#2)
+
+2000/10/28-29
+  code added	99,151,246
+  tested	99,151,246
+
+  # support VS-Unisystem(#99,#151)
+  # support change palette at:
+  #  'Excite Bike', 'Ice Climber', 'Super Mario Brothers'(#99),
+  #  'Gradius', 'Goonies'(#151)
+
+2000/10/28 (2nd)
+  code fixed	78,80(thanx rinao)
+  code tested	78
+
+  # support 'Holy Diver'(#78),'Kyuukyoku Harikiri Studium'(#80)
+
+2000/10/28
+  code fixed	winmain.cpp
+  code fixed	78,80(thanx rinao),NSF
+  tested	78,80,NSF
+
+  # support 'Uchuusen - Cosmo Cariier'(#78)
+  # support 'Hudoumyouou den','Mirai Shinwa Jarvas','Kyonshiizu 2'(#80)
+
+  # change the default state save file directory,
+  # from the same directory of rom, to 'state\' directory.
+  # 'state\' is made under the nester.exe automaticaly like 'save\'
+
+2000/10/27
+  code added	NSF
+  code fixed	nes_ppu,77(thanx rinao)
+  tested	NSF,2,77
+
+  # support NSF (NES Music Ripping Data).
+  # support VROM write protect, except Napoleon Senki(#77).
+  # support 'Sukeban Deka 3'(#2) (fixed SpriteCountMax check in PPU)
+
+2000/10/26
+
+  # add menu items to change disk.
+
+2000/10/24
+  code fixed	nes_fds(thanx stun),5(thanx parm)
+  tested	5
+
+  # support 'Uchuu Keibitai SDF'(#5)
+
+2000/10/23 (2nd)
+  code added	nes_mmc5
+  code fixed	nes_apu, nes_fds, nes_vrc6
+  code fixed	1,4(thanx Mikami-kana),5(thanx parm),118(thanx rinao),44
+  tested	5,44,118
+
+  # ignore PPU error in 'Dragon Quest 4'(#1) and 'Hoshi no Kirby'(#4)
+  # support ExtraSound in Nintendo MMC5
+  # sync All ExtraSound to APU.
+
+2000/10/23
+  code fixed	nes_apu, nes_fds, nes_fme7, nes_n106, nes_vrc6, nes_vrc7
+  tested	19,20,24,26,69,85
+
+  # fixed VRC6 write reg.
+  # sync ExtraSound to APU, except FDS and Namco106 Sound.
+
+2000/10/22 (4th)
+  code fixed	69
+
+  # support ExtraSound in Sunsoft FME7(#69)
+
+2000/10/22 (3rd)
+  code added	44,100
+  code fixed	113,231(thanx mm-mm)
+
+2000/10/22 (2nd)
+  code fixed	nes_apu.cpp
+  code fixed	67,89(thanx rinao)
+  tested	67,89
+
+  # support ExtraSound in all sound frequency.
+
+2000/10/20-22
+  code fixed	19,20,24,26,85(thanx GIGO, Kinoshita, stun)
+  code fixed	82,95(thanx rinao)
+  tested	82,95
+
+  # support ExtraSound in Namco106(#19),FDS(#20),VRC6(#24,#26),VRC7(#85)
+  # (support 44100 Hz mode only)
+
+(2000/10/18-20)
+
+  i'd been in Akita, to read a paper about the new air actuator i study
+  in my institute at a meeting of the fluid power society.
+
+2000/10/18
+  code added	72(thanx rinao)
+  code fixed	23(thanx GIGO)
+  tested	23,72
+
+  # support 'Ganbare Goemon 2'(#23)
+
+2000/10/17
+  code added	76,92,188(thanx rinao & parm)
+  tested	76,92,188
+
+2000/10/16
+  code added	243
+  code fixed	185
+  tested	185
+
+  # support 'Akira', 'Othelo', 'Kaisan Game', 'Bird Week', 'B-Wings',
+  #         'Spy & Spy'(#185)
+
+2000/10/15
+  code fixed	33,160,Nes.cpp
+  tested	33,160
+
+  # support frame-IRQ in every mappers, not only #2 and #3.
+
+2000/10/14 (2nd)
+  code added	160
+  tested	160
+
+2000/10/14
+  code fixed	65,Nes_rom.cpp
+  tested	20,65
+
+  # support FAM format disk images.
+
+2000/10/13
+  code fixed	33
+  tested	33
+
+  # support 'Captain Saver'#33
+
+2000/10/12 (2nd)
+  code fixed	16,20,Nes_rom.cpp
+  tested	16
+
+  # support 'Famicom Jump 2'(#16)
+  # support FDS format disk images.
+
+2000/10/11-12
+  code added	86,101,230,255
+  code fixed	16,19,33
+  tested	86,230,255
+
+  # $6000-$7FFF is mapped to SaveRAM in DDS2(#19)
+  # support 'DonDokoDon2' and 'BakushouJinseiGekijoh3'(#33)
+  # 22-in-1(#230) switch 'Contra' and '22 Games' in every reset.
+
+2000/10/11
+  code fixed	16,23,75
+  tested	16,23,75
+
+  # support 'Dragon Ball 3 Gokuh-den'(#16)
+  # support 'Parodius-da' and 'Tiny Toon Adventures'(#23)
+  # support 'Tetsuwan-Atom' and 'Jajamaru Ninpou-chou'(#75)
+
+2000/10/09-10
+  code fixed	5,16
+  tested	5,16
+
+2000/10/08 (3rd)
+  code fixed	90, NES_mapper.cpp
+  tested	5,90,228
+
+  # fixed the error that set_PPU_bank?() cannot accept over 256KB VROMs.
+  # e.g.'METAL SLADER GLORY'(#5), 'SamuraiSpirits'(#90), and 'Action52'(#228)
+
+2000/10/08 (2nd)
+  code fixed	5,21,24
+  tested	5*
+
+  # mapper #5 support 'METAL SLADER GLORY' only, almost KOEI games not work.
+
+2000/10/06-08
+  code added	5,113,117
+  code fixed	70,80,82,90
+  tested	5*,70,80,82**,117**
+
+  # support Kamen Rider Clueb(#70)
+
+2000/10/05
+  code added	90
+  code fixed	17,20
+  tested	17,90*
+
+  # support pure BIOS ROM image.
+
+2000/10/03-04
+  code added	20,82
+  code fixed	19,79,226
+  tested	20,79,82**,226
+
+  # mapper#20 needs "DISKSYS.ROM" in the same directory of nester.exe
+  # 20-in-1 #238 -> #231
+
+2000/10/02
+  code added	6,180,185,233
+  code fixed	19,25
+  tested	6,25,180,185,233
+
+  # i wrote supported mappers list "mappers.txt"
+  # mapper #25 IRQ fixed (Gradiius II)
+
+2000/10/01
+  code added	91,118,226,229
+  code fixed	2,3,21,24,69,95
+  tested	2(DQ2 Sound),3(DQ1 Sound),21,24,69,91**,(95),118,229
+
+  # i fixed frame-IRQ code in #2 & #3, it works very well. (thanx Mr.GIGO)
+  # Gimmick!(#69) is fixed.
+
+2000/09/30 (2nd)
+  code fixed	2,3,13
+  tested	13
+
+  # i added some codes of mapper #2 & #3, to support frame-IRQ.
+  # but not work yet.
+
+2000/09/30
+  code added	73,79,95,232,238
+  code fixed	19,67,71,80,88
+  tested	19*,67**,71,73,80*,88,(95)
+
+2000/09/29
+  code added	64,227,228
+  code fixed	13,41,71
+  tested	(13),41,64,227,228*
+
+  # the serious bug was corrected that save file is not saved,
+  # if directory 'save\' is not exist under 'nester.exe'
+
+2000/09/28
+  code added	13,112,114,225,231
+  code fixed	41
+  tested	13**,(41),42,71,75,112,(114),225
+
+  # mapper 71 Linus SPACEHEAD'S ... work
+              Fire Hawk ... not work
+
+  # mapper 75 King Kong II ... work
+              Jajamaru Ninpou chou ... not work
+
+2000/09/27
+  code added	15,41,42,75,94
+  tested	15*,(75),94
+
+2000/09/26
+  code added	34,71,87,88,93,122(=184)
+  code fixed	19,85
+  tested	34,(71),87,(88),93
+
+  # mapper 78 Irem -> Jaleco
+
+  # mapper 19 $6000-$7FFF is mapped to WorkRAM (e.g. DDS2)
+              Expand I/O is assigned by expand memory (e.g. MindSeeker),
+              but this expand memory is not saved when FreeROM().
+
+  # i give up to support Famista'92.
+  # other emulators also seem to be not able to display correctly.
+
+2000/09/25
+  code added	25,65,85
+  code fixed	17,21,32,66
+  tested	17,21*,25,32,65,66,67**,69,77,85,9*,97,184.
+
+2000/09/24
+  code added	8,11,17,67,77,78,89,97,184.
+  code fixed	68
+  tested	8,11,17*,68
+
+----------
+
+  *  have some problems
+  ** have serious problems
+  () not work
+
+
+--------------------------
+memo for Mr.Darren Ranalli
+--------------------------
+
+added mapper source
+
+  NES_mapper_MMC	5,10
+  NES_mapper_FFE	6,8,17
+  NES_mapper_Color	11
+  NES_mapper_Others	13,100,118
+  NES_mapper_Nin1	15,41,44,225,226,227,228,229,230,231,232,233,238
+  NES_mapper_Bandai	16,66,70,188
+  NES_mapper_Jaleco	18,72,75,78,86,92,101
+  NES_mapper_Namco	19,76,88,95
+  NES_mapper_FDS	20
+  NES_mapper_Konami	21,22,23,24,25,26,73,85,87
+  NES_mapper_Irem	32,65,77,97
+  NES_mapper_Taito	33,80
+  NES_mapper_Nina	34,79,231
+  NES_mapper_Pirates	42,90,91,112,160
+  NES_mapper_Sunsoft	67,68,69,89,93,122,184
+  NES_mapper_Camerica	71
+  NES_mapper_Capcom	94
+  NES_mapper_Nichibutsu	180
+  NES_mapper_Tecmo	185
+
+NES.cpp
+
+  added "mapper->MemoryRead()" for mapper19
+
+NES.h
+
+  l.42 friend (for added mapper use IRQ)
+
+NES_mapper.cpp / NES_mapper.h
+
+  added function "set_PPU_bank8()" - "set_PPU_bank11()" for mapper #68
+  virtual uint8 MemoryReadLow()
+  #include "(added mapper source)"
+
+NES_PPU.cpp / NES_PPU.h
+
+  added funcion "set_PPU_VRAM()" for mapper #19 & #80
+
+SNSS.cpp
+
+  added case 10,16,18,19,24,69 (other mappers also must be added !!)
+

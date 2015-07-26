@@ -1,0 +1,123 @@
+nesterJ English version History
+
+2000.10.30  v0.41 private version
+
+2000.11.04  v0.42
+	added mappers and fixed codes 
+
+	code added 99,151,189,240,246 
+
+	code fixd 0,1,2,3,4,8,19,80,82 
+
+	fixed graphics and sound problems 
+
+		support: 
+			Shougi Meikan 92/93, Business Wars, ProjectQ (#4) 
+			support: The Triathron (#1) 
+			Taito Grand Prix, Kyuukyoku Harikiri Studium (#82) 
+			Minna no Taabou no Nakayoshi Daisakusen (#3) 
+			DDS Megami Tensei2 (#19) 
+			Paris-Dakar Ralley Special(#8,#66) 
+
+		sound support : Exerion, Chack'n Pop, or others. 
+
+	support VS-Unisystem auto change palette 
+		Slalom (#0) 
+		Dr.Mario (#1) 
+		Castlevania (#2) 
+		Super Sky Kid (#4) 
+		Battle City , Clu Clu Land , Excite Bike , 
+		Golf , Ice Climber , Mach Rider , Pin Ball , 
+		Soccer , Super Mario Bros. (#99) 
+		Goonies , Gradius (#151)
+
+
+	support Expand Controllers: 
+		MIC device on 2P Controller 
+		Family Trainer 
+		Hyper Shot 
+		Mahjong Controller 
+		Pokkun Moguraa 
+		support save the datas writed to disk. 
+
+2000.11.18  v0.43
+	added mappers 
+		46,47,182,187 
+	fixd mappers 
+		1,3,4,5,16,19,20,21,23,25,32,43,64,65, 
+		67,68,69,70,96,112,117,160,235,231,241 
+
+	fixed the memory leak in the extra sound codes 
+
+	support Color/Monochrome bit of PPU $2001 partly (e.g. DragonQuest) 
+
+	support Expand Controller 
+		Optical Gun / Zapper 
+		Exciting Boxing Controller 
+		Power Pad 
+
+2000.11.27  v0.44
+	added mappers  48,83,242 
+	fixd mappers   3,4,23,25,85,96,180 
+	support Expand Controller 
+                Oeka Kids Tablet
+                Crazy Climber controller
+                Arkanoid Paddle
+        support 'Turbo File
+	support FAM5 Disk Image , NEZ ROM Image
+        fix the wait routine for FDS disk change.
+        fix the support of ROM Trainer.
+        fixed Color/Monochrome bit of PPU $2001
+        fix the aim point of 'Optical Gun'.
+        support VS-Atari RBI Baseball
+
+
+2000.12.03  v0.45
+	added mappers 
+		43,234 
+	fixd mappers 
+		1,4,16,45,71,88,112,232,235 
+	support 'Family Basic Key Board' 
+	fixed APU code 
+	fix save/load datas written to disk. 
+	support SaveRAM of 'Dragon Ball Z - Kyoushuu! Saiya Jin'(#16)
+	support BankSwitch-WRAM of 'Best Play - Pro Yakyuu Special'(#1)
+
+2000.12.24  v0.48
+	Screen Shot 
+	added mappers 
+		49(not work),50 
+	fixd mappers 
+		1,5,19,20,25,26,32,42,73,235 
+	fixd mappers(SNSS) 
+		16,17,18,19,21,22,23,24,25,26,32,33,46, 
+		48,64,65,67,68,69,73,75,76,82,85,88,95 
+	fixed APU code 
+	support DPCM IRQ (e.g.Romancia) 
+	support PPU BankSwitch of 'Mother'(#4) 
+
+2001.1.1  v0.49
+	added Scanline mode (in full-screen) 
+	added sound settings (for triangle-channnel) 
+	added mappers and fixed codes 
+	fixd mappers 
+		5,49 
+	fixed APU code 
+
+2001.2.1  v0.50
+	fixd mappers 4,18,20,33 
+	fixed APU code 
+	fixed NSF code 
+	fix 'Space Shadow Gun' 
+	support Rec/Play Movie. 
+	support network play (LAN / Internet) 
+	support state save for FDS games 
+	support 'Doremikko Keybord' 
+	support 'Data Recorder' 
+	support 'Datach Barcode Battler' 
+
+2001.2.2  v0.50fix
+	fixed sound bugs
+
+2001.2.5  v0.501
+	fixed save bugs

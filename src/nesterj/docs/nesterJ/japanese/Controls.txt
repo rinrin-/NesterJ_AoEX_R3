@@ -1,0 +1,110 @@
+   *  2Pコントローラーのマイク
+
+       'M'キー
+
+
+   * ファミリートレーナー , ぽっくんモグラー , Power Pad
+
+
+        [ 1] [ 2] [ 3] [ 4]      [ q] [ w] [ e] [ r]
+
+        [ 5] [ 6] [ 7] [ 8]  ->  [ a] [ s] [ d] [ f]   Start  ... [ t]
+
+        [ 9] [10] [11] [12]      [ z] [ x] [ c] [ v]   Select ... [ g]
+
+
+   * ハイパーショット (ハイパーオリンピック)
+
+        Run  : 'A' button
+        Jump : 'B' button
+
+
+   * 麻雀コントローラー ( 井出洋介名人の実践麻雀 )
+
+        [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N]
+              [Start] [Select] [Kan] [Pon] [Chii] [Reach] [Ron]
+
+                                  |
+                                  Y
+
+         [q] [w] [e] [r] [t] [y] [u] [a] [s] [d] [f] [g] [h] [j]
+               [  z  ] [   x  ] [ c ] [ v ] [  b ] [  n  ] [ m ]
+
+   * Exciting Boxing
+
+       [left HOOK] [left JABB] [rightJABB] [rightHOOK]
+
+       [left MOVE] [   BODY  ] [ STRAIGHT] [rightMOVE]
+
+                              |
+
+       [    q    ] [    w    ] [    e    ] [    r    ]
+
+       [    a    ] [    s    ] [    d    ] [    f    ]
+
+
+   * 光線銃 / Zapper
+
+       Shoot ... Mouse Left Crick
+       Sight ... Mouse Cursor
+
+
+  * クレイジークライマー コントローラ
+
+
+             up                up                   [w]            [y]
+              |                 |                    |              |
+       left --+-- right  left --+-- right  ->  [a] --+-- [d]  [g] --+-- [j]
+              |                 |                    |              |
+            down              down                  [s]            [h]
+
+
+  * おえかキッズ タブレット
+
+       Push Bottun  ... Mouse Left Button
+       Pen Position ... Mouse Cursor
+
+
+  * Family Basic Key Board
+
+       [STOP]         ->  [End]
+       [CLR/HOME]     ->  [Home]
+       [GRAPH](down)  ->  [PageDown]
+              ( up )  ->  [PageUp]
+       [KANA]         ->  [F12]
+       other keys     ->  same keys
+
+       [BackSpace]を押すことにより、全てのショートカットキーを無効に出来ます。
+       (メニューも無効になります）
+       もう一度押すと、元に戻すことが出来ます。
+
+
+  * Datach Barcode Battler
+
+       support JAN (normal/short) code.
+
+       input 8 or 13 digits in the menu
+         "Options" - "Control Device" - "Datach Barcode Battler".
+
+
+  * Doremikko Keyboard
+
+        +-+-+ +-+-+-+ +-+-+ +-+-+-+ +-+-+ +-+-+-+
+        |B|B| |B|B|B| |B|B| |B|B|B| |B|B| |B|B|B|    Black Key
+       +++++++++++++++++++++++++++++++++++++++++++
+       | | | | | | | | | | | | | | | | | | | | | |
+       |W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|   White Key
+       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+                           |
+
+        +-+-+ +-+-+-+ +-+-+ +-+-+-+ +-+-+ +-+-+-+
+        |S|D| |G|H|J| |L|;| |2|3|4| |6|7| |9|0|-|
+       +++++++++++++++++++++++++++++++++++++++++++
+       | | | | | | | | | | | | | | | | | | | | | |
+       |Z|X|C|V|B|N|M|,|.|/|Q|W|E|R|T|Y|U|I|O|P|@|
+       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+       disable all shortcut keys(e.g. F5 to state save) with [BackSpace]
+        (note: also disable all menu items)
+       and enable them with hitting [BackSpace] again.

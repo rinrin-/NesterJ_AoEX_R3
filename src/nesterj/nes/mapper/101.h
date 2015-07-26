@@ -1,0 +1,10 @@
+
+/////////////////////////////////////////////////////////////////////
+// Mapper 101
+void NES_mapper101_Reset();
+void NES_mapper101_MemoryWriteSaveRAM(uint32 addr, uint8 data);
+void NES_mapper101_MemoryWrite(uint32 addr, uint8 data);
+
+void NES_mapper101_Init();
+/////////////////////////////////////////////////////////////////////
+

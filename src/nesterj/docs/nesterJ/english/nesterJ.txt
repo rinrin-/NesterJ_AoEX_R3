@@ -1,0 +1,520 @@
+*********************************************
+*  nesterJ - NES/Famicom Emulator for Win32 *
+*********************************************
+
+
+==============
+ Introduction
+==============
+
+"nesterJ" is based on "nester public beta 3" by Darren Ranalli.
+It is added some functions.
+It is also added many mappers from "Unofficial nester" written by Mr. Takeda.
+Mr. Ranalli only knows these things; He do not know our details.
+So you cannot ask him about "nesterJ".
+
+The readme_uo.txt is document of Unofficial nester, by Mr.Takeda.
+Please see also the readme_uo.txt!
+
+
+
+==========
+ Versions
+==========
+
+2000.2.5 - ver 0.501
+
+
+
+=======
+ Files
+=======
+./
+   nesterJ.exe ...... executable
+   nesterJ.txt ...... this
+   history.txt ...... history of nesterJ
+
+./doc/
+
+   readme.txt ....... document of nester public beta 3 (by Darren Ranalli)
+   change.txt ....... document of Unofficial nester (by T.Takeda)
+   readme_uo.txt .... document of Unofficial nester (by T.Takeda)
+   mappers.txt ...... list of supported mappers (by T.Takeda)
+   GPL.txt .......... GNU General Public License
+
+./pal/
+   pallete files in this folder
+   "kasion.pal" is good palette , by Kasion.
+
+If you downloaded "Full set version", they included
+source files compressed with TAR+BZIP2. 
+
+
+
+==============
+ Requirements
+==============
+
+* Windows 95/98/ME and NT4.0/2000
+* DirectX 7.0a or higher (should work with earlier versions)
+* Service Pack 3 or higher required in NT
+* display card/monitor capable of displaying 256 or more colors
+* keyboard and/or joystick (DirectX 5 or higher required for joystick)
+* DirectSound-compatible sound card (recommended)
+
+
+
+=========
+ mappers
+=========
+nester public beta :
+    0,  1,  2,  3,  4   7,  9, 40
+
+
+added by Mr.Takeda :
+  MMC           5, 10, 47
+  FFE           6, 8, 17
+  ColorDream    11, 46
+  Others        13, 100, 118, 240, 242, 246
+  Nin1          15, 41, 44, 45, (49),225, 226, 227, 228, 229, 230, 231,
+                (232), 233, 234**, 235, 241, 255
+  Bandai        16, 66, 70, 96, 188
+  Jaleco        18, 72, 75, 78, 86, 92, 101
+  Namco         19*, 76, 88, 95
+  DiskSystem    20
+  Konami        21, 22, 23, 24, 25, 26, 73, 85, 87
+  Irem          32, 65, 77, 97
+  Taito         33, 48, 80, 82
+  Nina          34, 79
+  Pirates       42, (43), 50, 90, 91**, 112, 113, (114), 117, 160, 182,
+                (187), 189*, 243
+  Tengen        64
+  Sunsoft       67, 68, 69, 89, 93, 122, 184
+  Camerica      71
+  Capcom        94
+  VS Unisystem  99, 151
+  Nichibutsu    180
+  Tecmo         185
+
+  NSF           NESAudioRippingData
+
+  ?  not tested.
+  *  it has problem that sometimes screen is not correct.
+  ** it has serious problem that ALWAYS screen is not correct.
+  () not work.
+
+
+==========
+ Features
+==========
+
+nesterJ including "nester" & "Unofficial nester" features.
+
+"nesterJ" original Features :
+   * Reading compressed files
+
+     nesterJ can read these:
+
+        Archive type   |  Needed DLL 
+       ----------------+----------------
+        ARJ            |  UNARJ32J.DLL
+        LHA            |  UNLHA32.DLL
+        ZIP            |  UNZIP32.DLL
+        RAR            |  UNRAR32.DLL
+        TAR,GZIP,BZIP2 |  TAR32.DLL
+        CAB            |  CAB32.DLL
+        GZA,BZA        |  BZA32.DLL
+
+     You can get each DLLs from Common Archivers Library Project
+     If you want to use "UNRAR32.DLL", you must install
+     "UNRAR.DLL" which is included in "WinRAR".
+     "UNZIP32.DLL" is not "Info-UNZIP32.DLL".
+     It has upper compatibility with "Info-UNZIP32.DLL".
+     You can get it only from Common Archivers Library Project. 
+
+         Common Archivers Library Project web page:
+            http://www.csdinc.co.jp/archiver/
+
+
+   * Wave Recording
+     Start : click 'WAVE Recording' in menu. (or 'F11' key)
+     Finish: do above again.                 (or 'F11' key)
+
+
+   * Fast FWD
+     When 'Toggled Fast FWD' checked :
+
+       Tab : Start/End Fast FWD
+
+     otherwise:
+       Tab : Key down - Start Fast FWD
+             Key Up   - End Fast FWD
+
+   * Paths settings
+     SRAM ( *.sav ) & DISK save ( *.sdk ), state save , wave , screen shot (*.bmp)
+
+
+   * Blt mode setting
+     double-size windowed mode only
+
+
+   * Pausing Emulation
+     push 'Pause' key
+
+   * Emulating TV scanlines
+     Double-size windowed mode
+     full-screen mode:
+          (256x224)*2 <= S < (256x224)*3 // 224
+          (256x240)*2 <= S < (256x240)*3 // 240
+
+          S = your full-screen mode setting
+
+
+
+   * Error skipping
+     ignore PPU error in some games
+
+
+   * Using external palettes
+
+
+   * Screen Shot
+     push 'F12' key
+
+"nester public beta 3" Features : by Darren Ranalli
+
+   * DirectInput support
+   * SNSS savestate support
+     compatible with Nofrendo, LoopyNES, & others (http://www.nofrendo.org/snss/)
+   * uses nes6502, the fast 6502 core by Matthew Conte
+   * uses the Nosefart/Nofrendo APU core by Matthew Conte
+   * fullscreen and windowed display modes
+   * double-size windowed mode
+   * recent ROMs list
+   * black & white mode (for those of us who had to play our NES on a B&W TV -- what, am I the only one??)
+   * shell integration
+     associate .NES files with nester(J)! It's fun. Just do it. No, really. DO IT!
+
+
+"Unofficial nester" features : by T.Takeda
+
+   * Extended sound
+     Disk System , namco-106 , VRC6 , VRC7 ,
+     SUNSOFT-FME7 , Nintendo-MMC5
+
+   * Playing NSF
+     push start button to play sounds.
+     not support Jaleco 86 ExtraSound.
+
+   * Famicom Disk System
+     needs "DISKSYS.ROM" in the same directory of nesterJ.exe
+
+     Format : *.nes(#20)
+              *.fds(fwNES fds)
+              *.fam(fam4 format)
+
+     Disk Change : You can use keys or menu items
+       keys
+       'A'  : 1st disk side-A
+       'B'  : 1st disk side-B
+       'C'  : 2nd disk side-A
+       'D'  : 2nd disk side-B
+       'E'  : eject
+
+
+   * VS-Unisystem
+     coin insert key : 'M'
+
+     support auto change palette at:
+          #  0 : Slalom
+          #  2 : Castlevania
+          #  1 : Dr.Mario
+          #  4 : Super Sky Kid
+          # 99 : Battle City
+                 Clu Clu Land
+                 Excite Bike
+                 Golf
+                 Ice Climber
+                 Mach Rider
+                 Pin Ball
+                 Soccer
+                 Super Mario Bros.
+          #151 : Goonies
+                 Gradius
+
+     not support dip switch.
+
+   * Turbo File
+     
+   * Expand Controllers
+     > MIC device on 2P Controller
+     > Famili Trainer , Pokkun Moguraa
+     > Hyper Shot (Hyper Olympic)
+     > Mahjong Controller (Ide Yousuke Meijin No Jissen Mahjong)
+     > Arkanoid Paddle
+     > Oeka Kids Tablet
+     > Crazy Climber controller
+     > Family Basic Key Board
+
+     the games that controller is selected automaticaly are:
+         Exciting Boxing
+         Family Trainer - Aerobics Studio
+         Family Trainer - Athletic World
+         Family Trainer - Daiundoukai
+         Family Trainer - Fuuun!! Takeshi Jou 2 (not work)
+         Family Trainer - Jogging Race
+         Family Trainer - Manhattan Police
+         Family Trainer - Meiro Daisakusen
+         Family Trainer - Rairai! Kyounshiizu
+         Family Trainer - Running Stadium
+         Family Trainer - Totsugeki Fuuun Takeshi Jou
+
+         Hyper Olympic
+         Hyper Olympic Tonosama Version
+         Hyper Sports
+
+         Ide Yousuke Meijin No Jissen Mahjong
+         Ide Yousuke Meijin No Jissen Mahjong 2
+
+         Baby Boomer
+         Barker Bill's Trick Shooting
+         Chiller (not work, because the aim point is not white)
+         Duck Hunt
+         Freedom Force
+         Gotcha!
+         Gumshoe
+         Gun Sight
+         Hogan's Alley
+         Laser Invation
+         Mad City
+         Mechanized Attack
+         Shooting Range
+         The Adventures of Bayou Billy
+         Wild Gunman
+
+         Pokkun Moguraa
+
+         Athletic World
+         Dance Aerobics
+         Short Order - Eggsplode (support only Eggsplode)
+         Street Cop
+
+
+==========
+ Controls
+==========
+
+nesterJ supports DirectInput-compatible keyboards and joysticks.
+
+Here are the default controls:
+
+   d-pad  = arrow keys
+   Select = A
+   Start  = S
+   B btn  = Z
+   A btn  = X
+
+   hold '+'  : (on the num pad) to disable speed throttling
+   Ctrl+D    : toggles double-size in windowed mode
+   Alt+Enter : toggles between windowed mode and full-screen mode
+   Esc exits : full-screen mode
+   F5        : saves the game
+   F7        : loads a saved game
+   num keys  : 0-9 select a savestate "slot"
+   F1        : displays an About box
+   F11       : WAVE Recording Start/Finish
+   F12       : screen shot
+   Tab       : fast FWD
+   Ctrl+Tab  : toggled fast FWD
+   Pause     : pause
+
+
+   * Famicom Disk System
+
+       'A'  : 1st disk side-A
+       'B'  : 1st disk side-B
+       'C'  : 2nd disk side-A
+       'D'  : 2nd disk side-B
+       'E'  : eject
+
+   * Playing NSF
+
+     Play : JoyPad's Start button
+
+  * MIC device on 2P Controller
+
+       push 'm' to input voice.
+
+
+  * VS Unisystem
+
+       push 'm' to insert coin.
+
+
+  * Arkanoid Paddle
+
+       Paddle ... Mouse Cursor (move left or right)
+       Button ... Mouse Left Crick
+       Select ... Mouse Right Crick
+
+       disenable Arkanoid Paddle with menu if you want to use joypad.
+
+
+  * Clazy Climber Controller
+
+             up                up                   [w]            [y]
+              |                 |                    |              |
+       left --+-- right  left --+-- right  ->  [a] --+-- [d]  [g] --+-- [j]
+              |                 |                    |              |
+            down              down                  [s]            [h]
+
+
+  * Datach Barcode Battler
+
+       support JAN (normal/short) code.
+
+       input 8 or 13 digits in the menu
+         "Options" - "Control Device" - "Datach Barcode Battler".
+
+
+  * Doremikko Keyboard
+
+        +-+-+ +-+-+-+ +-+-+ +-+-+-+ +-+-+ +-+-+-+
+        |B|B| |B|B|B| |B|B| |B|B|B| |B|B| |B|B|B|    Black Key
+       +++++++++++++++++++++++++++++++++++++++++++
+       | | | | | | | | | | | | | | | | | | | | | |
+       |W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|W|   White Key
+       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+                           |
+
+        +-+-+ +-+-+-+ +-+-+ +-+-+-+ +-+-+ +-+-+-+
+        |S|D| |G|H|J| |L|;| |2|3|4| |6|7| |9|0|-|
+       +++++++++++++++++++++++++++++++++++++++++++
+       | | | | | | | | | | | | | | | | | | | | | |
+       |Z|X|C|V|B|N|M|,|.|/|Q|W|E|R|T|Y|U|I|O|P|@|
+       +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+       disable all shortcut keys(e.g. F5 to state save) with [BackSpace]
+        (note: also disable all menu items)
+       and enable them with hitting [BackSpace] again.
+
+
+  * Exciting Boxing Controller
+
+       [left HOOK] [left JABB] [rightJABB] [rightHOOK]
+
+       [left MOVE] [   BODY  ] [ STRAIGHT] [rightMOVE]
+
+                              |
+
+       [    q    ] [    w    ] [    e    ] [    r    ]
+
+       [    a    ] [    s    ] [    d    ] [    f    ]
+
+
+  * Family Basic Keyboard with Data Recorder
+
+     Family Basic Keyboard:
+
+       [STOP]         ->  [End]
+       [CLR/HOME]     ->  [Home]
+       [GRAPH](down)  ->  [PageDown]
+              ( up )  ->  [PageUp]
+       [KANA]         ->  [F12]
+       other keys     ->  same keys
+
+       disable all shortcut keys(e.g. F5 to state save) with [BackSpace]
+        (note: also disable all menu items)
+       and enable them with hitting [BackSpace] again.
+
+     Data Recorder:
+
+       control it at the menu 'Options' - 'Control Device' - 'Data Recorder'
+
+       data recorder file is normaly saved as 'tape\(ROM name).tpr'.
+        (you can change file name)
+
+       start 'Rec Recorder' before start 'SAVE'
+        (note: you must stop recording when SAVE is finished.)
+
+       and start 'Play Recorder' after start 'LOAD'
+        (note: stop automaticaly when finished playing whole tape)
+
+       need 27.3 KB per 1 sec to save datas.
+
+
+  * Family Trainer, Pokkun Moguraa, Power Pad
+
+       [ 1] [ 2] [ 3] [ 4]      [ q] [ w] [ e] [ r]
+
+       [ 5] [ 6] [ 7] [ 8]  ->  [ a] [ s] [ d] [ f]   Start  ... [ t]
+
+       [ 9] [10] [11] [12]      [ z] [ x] [ c] [ v]   Select ... [ g]
+
+
+  * Hyper Shot (Hyper Olympic)
+
+       Run  ... JoyPad's 'A' button
+       Jump ... JoyPad's 'B' button
+
+
+  * Mahjong Controller (Ide Yousuke Meijin No Jissen Mahjong)
+
+       [A] [B] [C] [D] [E] [F] [G] [H] [I] [J] [K] [L] [M] [N]
+             [Start] [Select] [Kan] [Pon] [Chii] [Reach] [Ron]
+
+                                  |
+
+       [q] [w] [e] [r] [t] [y] [u] [a] [s] [d] [f] [g] [h] [j]
+             [  z  ] [   x  ] [ c ] [ v ] [  b ] [  n  ] [ m ]
+
+
+  * Oeka Kids Tablet
+
+       Push Bottun  ... Mouse Left Button
+       Pen Position ... Mouse Cursor
+
+
+  * Optical Gun / VS Unisystem Zapper
+
+       Shoot ... Mouse Left Crick
+       Sight ... Mouse Cursor
+
+       note: not support in Full Screen Mode
+
+
+  * Space Shadow Gun
+
+       Shoot  ... Mouse Left Crick (full auto)
+       Sight  ... Mouse Cursor
+       Bomb   ... Mouse Right Crick
+       Others ... Pad1 (except A,B)
+
+       note: not support in Full Screen Mode
+
+
+
+=========
+ Contact
+=========
+
+Screw ( Chief )
+   otim2@chan.fm
+
+Mikami Kana ( Main Program )
+   mikamikana@geocities.co.jp
+
+We can not always answer your E-mail because we are busy :-( 
+
+
+web page : nesterJ English page
+   http://www.dcn.ne.jp/~otim2/nesterj-e.html
+
+
+BBS : Unofficial nester & nesterJ BBS
+   http://www.emulation9.com/cgi-bin/nesterbbs.cgi
+
+
+The author shall not be held responsible for any damage or loss caused by this software.
+Use it at your own risk. 

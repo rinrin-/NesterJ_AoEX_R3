@@ -1,0 +1,9 @@
+"nesterJ" is based on "nester public beta 3" by Darren Ranalli.
+It is translated into Japanese and added some functions.
+It is also added many mappers written by Mr. Takeda.
+Mr. Ranalli only knows these things; He does not know our details.
+So you cannot ask him about "nesterJ".
+
+We released English version.
+You can get English verjon from;
+http://www.dcn.ne.jp/~otim2/nesterj/english/index.html

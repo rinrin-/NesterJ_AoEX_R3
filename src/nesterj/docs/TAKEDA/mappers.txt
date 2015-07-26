@@ -1,0 +1,139 @@
+
+Unofficial nester  Mappers List (2001/07/05)
+
+
+===== tested mappers ==========================================================
+
+No.	Chipset Name			
+----------------------------------------
+0	32kb ROM/8k VROM		
+1	Nintendo MMC1			
+2	UNROM				
+3	CNROM				
+4	Nintendo MMC3			
+5	Nintendo MMC5			
+6	FFE F3xxx series		
+7	AOROM				
+8	FFE F3xxx series		
+9	Nintendo MMC2			
+10	Nintendo MMC4			
+11	Colour Dreams			
+13	CPROM				
+15	100-in-1 chip			
+16	Bandai chip			
+17	FFE F8xxx			
+18	Jaleco  SS8806			
+19	Namcot 106			
+20	Nintendo Disk System		
+21	Konami VRC4 2A			
+22	Konami VRC4 1B			
+23	Konami VRC2b			
+24	Konami VRC6			
+25	Konami VRC4			
+26	Konami VRC6V			
+32	Irem G101			
+33	Taito TC0190/TC0350		
+34	Nina-1				
+40	SMB2j				
+41	Caltron 6-in-1			
+42	Mario Baby			
+43	SMB2j				
+44	Super HiK 7-in-1		
+45	1000000-in-1			
+46	Rumble Station			
+47	NES-QJ				
+48	Taito TC190V			
+49	Super HiK 4-in-1		
+50	SMB2j				
+51	11-in-1 Ball Games		
+52	Mario 7-in-1			
+57	54-in-1				
+58	68-in-1				
+60	65-in-1				
+64	Tengen Rambo-1			
+65	Irem H3001			
+66	Bandai 74161/32			
+67	Sunsoft Mapper 3		
+68	Sunsoft Mapper 4		
+69	Sunsoft Mapper 5		
+70	74161/32			
+71	Camerica Mapper			
+72	Jaleco Early Mapper #0		
+73	Konami VRC3			
+75	Jaleco/Konami VRC1		
+76	Namco 109			
+77	Irem Early Mapper 0		
+78	Jaleco 74161/32			
+79	Nina-3 (AVE)			
+80	Taito X-005			
+82	Taito C075			
+83	Cony				
+85	Konami VRC7			
+86	Jaleco Early Mapper #2		
+87	Konami 74161/32			
+88	Namco 118			
+89	Sunsoft Early Mapper		
+90	PC-JY-??			
+92	Jaleco Early Mapper #1		
+93	Sunsoft 74161/32		
+94	Capcom 74161/32			
+95	Namco 106M			
+96	Bandai 74161/32			
+97	Irem 74161/32			
+99	VS Unisystem			
+100	Nesticle MMC3			
+101	Jaleco 74161/32			
+105	Nintendo World Championship	
+112	PC-Asder			
+113	PC-Sachen/Hacker		
+117	PC-Future			
+118	IQS MMC3			
+119	TQ-ROM				
+122	Sunsoft 74161/32		
+151	VS Unisystem (Konami)		
+160	PC-Aladdin			
+180	Nichibutsu			
+181	Hacker International Type2	
+182	PC-SuperDonkeyKong		
+184	Sunsoft 74161/32		
+185	CHR-ROM Disable Protect		
+188	Bandai Karaoke Studio		
+189	Street Fighter 2 Yoko		
+225	72-in-1				
+226	76-in-1				
+227	1200-in-1			
+228	Action 52			
+229	31-in-1				
+230	22-in-1				
+231	20-in-1				
+232	Quattro Games			
+233	42-in-1				
+234	Maxi 15				
+235	150-in-1			
+236	800-in-1			
+240	Gen Ke Le Zhuan			
+242	Wai Xing Zhan Shi		
+243	PC-Sachen/Hacker		
+245	Yong Zhe Dou E Long		
+246	Phone Serm Berm			
+248	Bao Qing Tian			
+255	110-in-1			
+NSF	NES Music Ripping Data		
+PCT	PlayChoice-10 ROM Image		
+
+
+===== tested mappers (with SERIOUS problems) ==================================
+
+No.	Chpset Name			
+----------------------------------------
+91	PC-HK-SF3			
+
+
+===== tested mappers (not work) ===============================================
+
+No.	Chpset Name			
+----------------------------------------
+183	Gimmick (Bootleg)		
+187	Street Fighter Zero 2 97	
+237	70-in-1				
+
